@@ -1,7 +1,6 @@
 #include <WiFi.h>
 #include <Firebase_ESP_Client.h>
 
-
 #define WIFI_SSID "esp"
 #define WIFI_PASSWORD "88888888"
 
@@ -11,19 +10,14 @@
 #define USER_EMAIL "naimkyau.cse@gmail.com"
 #define USER_PASSWORD "123456789"
 
-
 FirebaseData fbdo;
 FirebaseAuth auth;
 FirebaseConfig config;
 
 unsigned long sendDataPrevMillis = 0;
 
-const int ledPin = 4;
-
 void setup()
 {
-  pinMode(ledPin, OUTPUT);
-  digitalWrite(ledPin, LOW);
 
   Serial.begin(115200);
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
